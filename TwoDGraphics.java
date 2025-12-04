@@ -22,6 +22,8 @@ public class TwoDGraphics extends JFrame{
 		g.setColor(Color.GREEN);
 		g.drawRect(100,100,200,200);
 		g.fillRect(100,100,200,200);
+		g.setColor(Color.BLACK);
+		g.drawOval(400,400,100,100);
 	}
 
 	public static void main(String[]args){
