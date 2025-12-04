@@ -14,6 +14,10 @@ public class TwoDGraphics extends JFrame{
 
 	public void paint(Graphics g){
 		g.drawLine(100,100,300,300);
+		g.drawLine(100,100,300,100);
+		g.drawLine(100,100,100,300);
+		g.drawLine(100,300,300,300);
+		g.drawLine(300,300,300,100);	
 	}
 
 	public static void main(String[]args){
