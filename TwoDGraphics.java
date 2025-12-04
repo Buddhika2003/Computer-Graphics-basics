@@ -26,6 +26,9 @@ public class TwoDGraphics extends JFrame{
 		g.drawLine(200,0,200,400);
 		g.drawLine(0,200,400,200);
 
+		g.drawArc(150,150,100,100,0,90);
+		g.drawArc(150,150,100,100,180,90);
+
 	}
 
 	public static void main(String[]args){
