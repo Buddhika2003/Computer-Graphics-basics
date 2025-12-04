@@ -19,7 +19,9 @@ public class TwoDGraphics extends JFrame{
 		g.drawLine(100,300,300,300);
 		g.drawLine(300,300,300,100);	*/
 
+		g.setColor(Color.GREEN);
 		g.drawRect(100,100,200,200);
+		g.fillRect(100,100,200,200);
 	}
 
 	public static void main(String[]args){
