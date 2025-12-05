@@ -42,7 +42,41 @@ public class BresenhamAlgorithm extends JFrame implements MouseListener{
 
 	} 
 
-	public void mouseClicked(MouseEvent e){}
+	public void BresenhamAlgo2(int x1, int y1, int x2, int y2){
+		int x, y, dx, dy, xend, d1;
+
+        dx = Math.abs(x2 - x1);
+        dy = Math.abs(y2 - y1);
+
+        d1 = 2*dy - dx;
+
+        if(dy <= dx){
+            if(x1 > x2){
+                x = x2;
+                y = y2;
+                xend = x1;
+            }else{
+                x = x1;
+                y = y1;
+                xend = x2;
+            }
+
+            g.drawLine(x, y, x, y);
+
+            for(int i = x+1 ; i < xend ; i++){
+                if(d1 < 0){
+                    d1 = d1 + 2 * dy;
+                }else{
+                    d1 = d1 + 2 * (dy - dx);
+                    if(y1 < y2) y++;
+                    else y--;
+                }
+                g.drawLine(i, y, i, y);
+            }
+        }
+    }
+		
+	
 	public void mousePressed(MouseEvent e){
 		x1 = e.getX();
 		y1 = e.getY(); 
@@ -51,10 +85,11 @@ public class BresenhamAlgorithm extends JFrame implements MouseListener{
 		x2 = e.getX();
 		y2 = e.getY();
 
-		BresenhamAlgo(x1,y1,x2,y2);
+		BresenhamAlgo2(x1,y1,x2,y2);
 	}
 	public void mouseEntered(MouseEvent e){}
 	public void mouseExited(MouseEvent e){}
+	public void mouseClicked(MouseEvent e){}
 
 
 	public static void main(String []args){
